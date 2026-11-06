@@ -1,7 +1,8 @@
 # Property Footprint Intelligence
 
 **DSC 180A Capstone | Cotality**
-Team: Aarshia Gupta, Dhruv, Dylan, Clayton
+Team: Aarshia Gupta, Clayton Tan, Dhruv Sehgal, Dylan Louie
+
 Mentor: Lawrence Vulis (Cotality)
 
 ## Overview
