@@ -1,8 +1,11 @@
-duckdb
-geopandas
-osmnx
-shapely
-pandas
-pyarrow
-matplotlib
-jupyter
+# Python 3.12
+duckdb==2.0.0
+geopandas==1.2.0
+osmnx==2.1.1
+shapely==2.2.0
+pandas==3.1.1
+pyarrow==26.0.1
+matplotlib==3.11.2
+contextily==1.7.1
+requests==2.34.2
+jupyter==1.1.1
