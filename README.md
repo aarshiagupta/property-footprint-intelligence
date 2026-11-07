@@ -50,7 +50,7 @@ test areas for developing and validating the methods we will use in Q2.
 | Overture Maps | Combined global building footprints | Used for exploration |
 | National Structure Inventory | Structure-level property attributes | Possible for Q2 |
 
-Data files are not stored in this repo. Running the fetch script downloads
+Data files are not stored in this repo. Running the fetch script `src/data/fetch_osm.py` downloads
 them into `data/raw/`. All footprints are reprojected to EPSG:32611
 (UTM zone 11N, in meters) so that distances, buffers, and areas are
 measured in meters.
