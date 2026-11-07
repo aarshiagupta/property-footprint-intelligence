@@ -14,6 +14,8 @@ imagery, but extraction tools have changed significantly between 2021 and
 often unclear whether a change in the data reflects a real change on the
 ground or an artifact of how the footprint was extracted.
 
+*AI Usage: We used Claude and Copilot to help explain documentation, with additional context on the readings, to help edit parts of this report, and to help plan our repository structure. AI assistance was used for DuckDB code, but all code validation was done manually. All prompts and further details are covered in* `AI_USE.md` *in the repository.*
+
 ## Project Phases
 **Quarter 1 (Fall): building footprint extraction and analysis**
 We are building a foundation in GIS and building data (spatial SQL with
@@ -50,7 +52,7 @@ test areas for developing and validating the methods we will use in Q2.
 | Overture Maps | Combined global building footprints | Used for exploration |
 | National Structure Inventory | Structure-level property attributes | Possible for Q2 |
 
-Data files are not stored in this repo. Running the fetch script downloads
+Data files are not stored in this repo. Running the fetch script `src/data/fetch_osm.py` downloads
 them into `data/raw/`. All footprints are reprojected to EPSG:32611
 (UTM zone 11N, in meters) so that distances, buffers, and areas are
 measured in meters.
