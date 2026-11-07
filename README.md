@@ -14,6 +14,8 @@ imagery, but extraction tools have changed significantly between 2021 and
 often unclear whether a change in the data reflects a real change on the
 ground or an artifact of how the footprint was extracted.
 
+*AI Usage: We used Claude and Copilot to help explain documentation, with additional context on the readings, to help edit parts of this report, and to help plan our repository structure. AI assistance was used for DuckDB code, but all code validation was done manually. All prompts and further details are covered in \texttt{AI\_USE.md} in the repository.*
+
 ## Project Phases
 **Quarter 1 (Fall): building footprint extraction and analysis**
 We are building a foundation in GIS and building data (spatial SQL with
