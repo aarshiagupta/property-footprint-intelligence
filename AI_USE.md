@@ -43,3 +43,11 @@
 **AI assistance:** Claude generated the initial notebook for Part 4a, using the building footprint data previously collected through \texttt{fetch\_osm.py}. The notebook shifts every footprint 5 m east with DuckDB’s ST\_Translate(geom, 5, 0) and plots the original (blue) and shifted (red) footprints in a zoomed 250 m window. I ran the notebook on the 92104 data, checked the outputs below, and added it to the repo through a pull request.
 
 **Validation:** I checked that the coordinate system was EPSG:32611, verified that the building footprints appeared within the correct ZIP code boundary, and confirmed that every building centroid moved exactly 5 meters. I also visually inspected the original and shifted footprints to confirm that the translation worked correctly.
+### Clayton Tan: 92104 reentrant corners
+**Prompt submitted to Claude (paraphrased):** pasted the reentrant-corners SQL homework and asked for help writing the code for 92104.
+
+**Task context:** Find the reentrant (concave) corners of every building footprint in ZIP 92104 using SQL, measure how deep each one is, and summarise the results.
+
+**AI assistance:** Claude drafted `notebooks/footprint_analysis/92104_reentrant_corners.ipynb`. The DuckDB query explodes each polygon into vertices, uses the cross product of the edges either side of each vertex (signed by the ring's orientation) to flag concave corners, gets the interior angle with atan2, and measures depth as distance to the convex hull. Claude also explained the geometry behind each step.
+
+**Validation:** I ran the notebook on the 92104 footprints. I tested the method first on shapes with known answers: an L drawn counterclockwise and the same L drawn clockwise each gave exactly one 270° corner at (1, 1), and a square gave none, so the orientation handling works. On the real data the interior angles cluster at 270° (median 270.0°, IQR 269.8–270.1°), which fits right-angled notches. 13,856 reentrant corners across 4,815 of 10,826 buildings (44.5%); median depth 1.45 m, with 40.9% deeper than 6 ft. I also inspected the plots to confirm the flagged corners sit on visible notches.
